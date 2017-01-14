@@ -10,15 +10,6 @@ try
 catch
 endtry
 
-" config: START
-" enable line numbers
-set number
-
-filetype plugin indent on
-
-set hidden
-" config: END
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
@@ -32,9 +23,24 @@ Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual
 Plugin 'Yggdroot/indentLine'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'Raimondi/delimitMate'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'airblade/vim-gitgutter'
 
 " plugins: END
-
+"
+"
 call vundle#end()
+
+" config: START
 filetype plugin indent on
 
+set nofoldenable
+set number
+set hidden
+set shiftwidth=2
+set softtabstop=2
+
+colorscheme seti
+" config: END
